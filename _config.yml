@@ -4,7 +4,7 @@ pygments: true
 safe: true
 lsi: false
 baseurl:
-url: hackpackers.lonelyplanet.com
+url: engineering.lonelyplanet.com
 authors:
   mriddle:
     display_name: Matt Riddle
