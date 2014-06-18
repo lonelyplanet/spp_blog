@@ -33,9 +33,18 @@ Here are some handy customizations to refine your GitHub searches:
 
 [`rspec path:Gemfile @lonelyplanet -repo:lonelyplanet/openresty-statsd`](https://github.com/search?q=rspec+path%3AGemfile+%40lonelyplanet+-repo%3Alonelyplanet%2Fopenresty-statsd&type=Code&ref=searchresults)
 
-**Find a files that contain sloths within your organization**
+**Find all files that contain sloths within your organization**
 
 [`sloth in:file -extension:rb @lonelyplanet`](https://github.com/search?q=sloth+in%3Afile+-extension%3Arb+%40lonelyplanet&type=Code&ref=searchresults)
+
+**Find sensative information**
+
+* [`"PRIVATE KEY" in:file path:.ssh/id_rsa`](https://github.com/search?q=%22PRIVATE+KEY%22+in%3Afile+path%3A.ssh%2Fid_rsa&type=Code&ref=searchresults)
+* [`secret_token OR gmail_password extension:yml`](https://github.com/search?q=secret_token+OR+gmail_password+extension%3Ayml+&type=Code&ref=searchresults)
+
+**Find local talent**
+
+[`location:"Nashville, TN" language:"Ruby" followers:>20`](https://github.com/search?q=location%3A%22Nashville%2C+TN%22+language%3A%22Ruby%22+followers%3A%3E20&type=Users&ref=searchresults)
 
 You can find more info on search syntax on [GitHub Help](https://help.github.com/articles/search-syntax).
 
