@@ -37,7 +37,7 @@ Here are some handy customizations to refine your GitHub searches:
 
 [`sloth in:file -extension:rb @lonelyplanet`](https://github.com/search?q=sloth+in%3Afile+-extension%3Arb+%40lonelyplanet&type=Code&ref=searchresults)
 
-**Find sensative information**
+**Find sensitive information**
 
 * [`"PRIVATE KEY" in:file path:.ssh/id_rsa`](https://github.com/search?q=%22PRIVATE+KEY%22+in%3Afile+path%3A.ssh%2Fid_rsa&type=Code&ref=searchresults)
 * [`secret_token OR gmail_password extension:yml`](https://github.com/search?q=secret_token+OR+gmail_password+extension%3Ayml+&type=Code&ref=searchresults)
