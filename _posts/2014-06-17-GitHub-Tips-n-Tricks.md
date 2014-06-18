@@ -53,19 +53,18 @@ The same thing can also be done from GitHub comments
 
 ## Code comparison
 
-We already know `org/repo/compare` for creating a pull-request from a branch within GitHub but did you know there's more to it?
+You may already be familiar with using [http://github.com/<org>/<repo>/compare]() to create a pull-request from a branch, but it's also super useful for filtering commits.
 
-See what's changed in the last day
-
+**See what's changed in the last day**
+Using git's date specifications `{5 minutes ago}`
 [https://github.com/lonelyplanet/rizzo/compare/master@{1.day.ago}...master](https://github.com/lonelyplanet/rizzo/compare/master@{1.day.ago}...master)
 
-Or what you're missing out on in your fork
+**Or what you're missing out on in your fork**
 `org/repo/compare/{foreign-user}:{branch}...{own-branch}`
 
 [https://github.com/lonelyplanet/rizzo/compare/evantravers:master...master](https://github.com/lonelyplanet/rizzo/compare/evantravers:master...master)
 
-
-
+There's more [details on comparing commits on GitHub](https://help.github.com/articles/comparing-commits-across-time) as well as info on git's [date revisions](https://www.kernel.org/pub/software/scm/git/docs/gitrevisions.html)
 
 ## Keyboard shortcuts
 
