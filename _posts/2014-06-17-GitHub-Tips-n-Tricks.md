@@ -88,4 +88,4 @@ Use line highlights to point out interesting bits of code to your mates
 
 Highlight the text you want to reply to and hit `r`. GitHub will quote the text for you
 
-<img src="https://camo.githubusercontent.com/df4de1519cc0c3cc4d394f309f1d5c7c92297e03/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3239363433322f3132343438332f62306661363230342d366566302d313165322d383363332d3235366333376661376162632e676966" alt="Demonstrate quoting in GitHub" />
+<img src="/img/github_replying.gif" alt="Demonstrate quoting in GitHub" />
