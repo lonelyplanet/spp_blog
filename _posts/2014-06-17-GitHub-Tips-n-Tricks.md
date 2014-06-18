@@ -23,17 +23,21 @@ After:
 
 ## Search
 
+Here are some handy customizations to refine your GitHub searches:
+
 **Finding gem versions within your organization**
 
 [`rails path:Gemfile @lonelyplanet`](https://github.com/search?q=rails+path%3AGemfile+%40lonelyplanet&type=Code&ref=searchresults)
 
-Perhaps there are some old repositories you want to ignore
+**Perhaps there are some old repositories you want to ignore**
 
 [`rspec path:Gemfile @lonelyplanet -repo:lonelyplanet/openresty-statsd`](https://github.com/search?q=rspec+path%3AGemfile+%40lonelyplanet+-repo%3Alonelyplanet%2Fopenresty-statsd&type=Code&ref=searchresults)
 
 **Find a files that contain sloths within your organization**
 
 [`sloth in:file -extension:rb @lonelyplanet`](https://github.com/search?q=sloth+in%3Afile+-extension%3Arb+%40lonelyplanet&type=Code&ref=searchresults)
+
+You can find more info on search syntax on [GitHub Help](https://help.github.com/articles/search-syntax).
 
 ## Cross-references
 
