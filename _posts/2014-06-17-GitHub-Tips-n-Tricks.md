@@ -41,7 +41,7 @@ You can find more info on search syntax on [GitHub Help](https://help.github.com
 
 ## Cross-references
 
-Shipping something dependant on another repo
+Shipping something dependent on another repo
 
 `git commit -m "Roll out new UI from lonelyplanet/rizzo#782"`
 
