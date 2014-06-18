@@ -7,10 +7,10 @@ author: mriddle
 
 ## Whitespace
 
-Reviewing changes in GitHub is great, however sometimes you're stuck dealing with a pull request that has a bunch of whitespace.
-By adding `?w=1` to the URL whitespace will be ignored.
+Reviewing changes on [GitHub](http://github.com) is great, however sometimes it's hard to focus on important changes when you're sifting through a pull request that has a bunch of whitespace changes.
+Luckily, by adding `?w=1` to the end of the URL whitespace will be ignored. To see whitespace again, simply remove the URL parameter.
 
-**Note:** When including it in the URL you don't see line comments and are unable to create them.
+**Note:** Be aware when using this option, you cannot see line comments and are unable to create them.
 
 Before:
 
@@ -77,6 +77,3 @@ Use line highlights to point out interesting bits of code to your mates
 Highlight the text you want to reply to and hit `r`. GitHub will quote the text for you
 
 <img src="https://camo.githubusercontent.com/df4de1519cc0c3cc4d394f309f1d5c7c92297e03/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3239363433322f3132343438332f62306661363230342d366566302d313165322d383363332d3235366333376661376162632e676966" alt="Demonstrate quoting in GitHub" />
-
-
-
