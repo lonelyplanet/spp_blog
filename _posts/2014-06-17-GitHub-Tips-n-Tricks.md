@@ -37,7 +37,7 @@ Perhaps there are some old repositories you want to ignore
 
 ## Cross-references
 
-Shipping something dependant on another rep
+Shipping something dependant on another repo
 
 `git commit -m "Roll out new UI from lonelyplanet/rizzo#782"`
 
