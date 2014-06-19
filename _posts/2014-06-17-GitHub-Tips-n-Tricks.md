@@ -62,7 +62,7 @@ The same thing can also be done from GitHub comments
 
 ## Code comparison
 
-You may already be familiar with using [`http://github.com/<org>/<repo>/compare`]() to create a pull-request from a branch, but it's also super useful for filtering commits.
+You may already be familiar with using [`http://github.com/<org>/<repo>/compare`](http://github.com/<org>/<repo>/compare) to create a pull-request from a branch, but it's also super useful for filtering commits.
 
 **See what's changed in the last day**
 Using git's date specifications `{5 minutes ago}`
