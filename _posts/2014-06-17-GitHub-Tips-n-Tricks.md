@@ -39,8 +39,8 @@ Here are some handy customizations to refine your GitHub searches:
 
 **Find sensitive information**
 
-* [`"PRIVATE KEY" in:file path:.ssh/id_rsa`](https://github.com/search?q=%22PRIVATE+KEY%22+in%3Afile+path%3A.ssh%2Fid_rsa&type=Code&ref=searchresults)
-* [`secret_token OR gmail_password extension:yml`](https://github.com/search?q=secret_token+OR+gmail_password+extension%3Ayml+&type=Code&ref=searchresults)
+* [`"PRIVATE KEY" in:file path:.ssh/id_rsa @johndouthat`](https://github.com/search?q=%22PRIVATE+KEY%22+in%3Afile+path%3A.ssh%2Fid_rsa+%40johndouthat&nwo=johndouthat%2Fmydotfiles&search_target=global&ref=cmdform)
+* [`secret_token OR gmail_password extension:example`](https://github.com/search?p=9&q=secret_token+OR+gmail_password+extension%3Aexample&ref=searchresults&type=Code)
 
 **Find local talent**
 
