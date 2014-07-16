@@ -225,7 +225,7 @@ I think there is definitely room to improve this process using tools like [Compo
 
 <h2 id="rizzo" class="blog-subtitle">Rizzo</h2>
 
-Our Style Guide is named Rizzo and is available at [rizzo.lonelyplanet.com](http://rizzo.lonelyplanet.com/styleguide/ui-components/cards). The source code is also now public at [github.com/lonelyplanet/rizzo](github.com/lonelyplanet/rizzo). The implementation is very bespoke to Lonely Planet but should give some indication of how it works if you are interested in taking a similar approach. Here are a few example pieces that make up Rizzo:
+Our Style Guide is named Rizzo and is available at [rizzo.lonelyplanet.com](http://rizzo.lonelyplanet.com/styleguide/ui-components/cards). The source code is also now public at [github.com/lonelyplanet/rizzo](https://github.com/lonelyplanet/rizzo). The implementation is very bespoke to Lonely Planet but should give some indication of how it works if you are interested in taking a similar approach. Here are a few example pieces that make up Rizzo:
 
 [A component template](https://github.com/lonelyplanet/rizzo/blob/master/app/views/components/cards/_blog_card.html.haml)
 
