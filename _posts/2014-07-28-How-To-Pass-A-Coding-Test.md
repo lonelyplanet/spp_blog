@@ -2,7 +2,7 @@
 layout: post
 title: How To Pass A Coding Test
 excerpt: Coding tests seem to be a big hurdle for many developers. Here's some tips to help you get to the next stage.
-author: adelsmee
+author: asmee
 ---
 
 At Lonely Planet our first significant hiring hurdle is a coding test ([check out this post](http://joneaves.wordpress.com/2014/07/21/toy-robot-coding-test) if you want to know why). Approximately 85% of potential hires are eliminated by this test. Often the experience and achievements of the candidate don't match at all with the quality of code they send through to us. So either they're telling big fat resume lies, or there are a lot of people who aren't getting the results they expect. If you're in the latter group, this post is for you.
