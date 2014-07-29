@@ -27,8 +27,8 @@ Write code that is as similar to production-level code as possible, given the co
 ### Write Tests!
 We like TDD, it is mentioned in our job advert, so of course one of the things we look for in a candidate is the ability to write good tests. What makes a good test?
 
-- Make sure your test makes it easy to identify where the problem in your code is. A simple way to do this is to only make one assertion per test block.
-- Unit test. Just to be sure you know what I mean by that: "a unit [is] the smallest testable part of an application".
+- Make sure your test makes it easy to identify where the problem in your code is. A simple way to do this is to make only one assertion per test block.
+- Unit test. Just to be sure you know what we mean by that: "a unit [is] the smallest testable part of an application["](http://en.wikipedia.org/wiki/Unit_testing).
 - Unit test everything. Or as much of everything as possible. 60% is not good enough 80% is lazy. 95%+ is getting there. 100% is great. The coding test probably won't have tricky edge cases that are untestable, so aim for 100%.
 - Integration tests for our coding exercise are optional, but whether to include them or not will depend on the type of test you are doing. If you're not sure, put them in anyway. So far we haven't rejected anyone for putting in too many tests.
 
@@ -46,7 +46,7 @@ A key quality of a good developer is attention to detail. Here's a list of detai
 - make sure the app runs before you send it in
 - tidy up your spelling everywhere - comments, project names, email, variable names, class names and all of the other places
 - use a recent version of your chosen language, not an old one
-- don't concatenate variable names. I have no idea what `c << a if g` means and neither will you in six months
+- don't concatenate variable names. We have no idea what `c << a if g` means and neither will you in six months
 - finish the coding test before you submit it, a partial solution is not enough. If you feel it is taking too long, get in touch and we can negotiate a better submission date.
 
 Going for a job is a nerve-wracking process; no one likes to be judged. Writing code does have a strong creative element so what appeals to one person isn't necessarily going to appeal to another. However, it's our hope that by following these guidelines you can maximise your chances of getting through to the next stage in the hiring process. Have fun and good luck!
