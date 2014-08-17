@@ -5,6 +5,7 @@ safe: true
 lsi: false
 baseurl:
 url: engineering.lonelyplanet.com
+exclude: [vendor]
 authors:
   mriddle:
     display_name: Matt Riddle
