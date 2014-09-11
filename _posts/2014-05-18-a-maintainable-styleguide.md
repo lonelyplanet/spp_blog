@@ -231,7 +231,7 @@ Our Style Guide is named Rizzo and is available at [rizzo.lonelyplanet.com](http
 
 [A component Stylesheet](https://github.com/lonelyplanet/rizzo/blob/master/app/assets/stylesheets/core/core_components/cards/_card_appearance.sass)
 
-[API Helper](https://github.com/lonelyplanet/rizzo/blob/master/app/helpers/styleguide_helper.rb#L341)
+[API Helper](https://github.com/lonelyplanet/rizzo/blob/4ba32e6c4ac404702ed6e366e25b76e8ed767fa5/app/helpers/component_helper.rb#L3)
 
 [Style Guide Data](https://github.com/lonelyplanet/rizzo/tree/master/app/data/styleguide)
 
