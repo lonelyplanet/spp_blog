@@ -1,8 +1,10 @@
 ---
 layout: post
-title: The Roost JS/jQuery Conference or: How I Learned to Stop Worrying and Love Components
+title: The Roost JS-jQuery Conference or How I Learned to Stop Worrying and Love Components
 author: joeshep
 ---
+
+####or: How I Learned to Stop Worrying and Love Components
 
 Four days, two conferences, one city. Last week I, along with fellow LP and NC2 front-end developers Hailey Mahan and Erle Mulligan, attended the back-to-back Roost JS and JQuery conferences in Chicago. The gatherings were organized by [Bocoup](http://bocoup.com/), "an Open Web technology company by and for programmers," and the the [jQuery Foundation](https://jquery.org/). Roost used a live coding format to build a Backbone app over two days of lecture-dense sessions. It was an opportunity to delve into multiple aspects of application engineering including tools, code style, file structure, testing, optimization, security, workflow, and documentation.
 
