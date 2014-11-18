@@ -14,13 +14,13 @@ An important consideration in providing a public API is documentation. Complete,
 
 To make this job easier, there are currently some alternatives[[1](#note_1)] that allow the generation of the documentation from a definition file. This definition file can also be used to run an integration test suite, ensuring the generated documentation matches the server response.
 
-At LonelyPlanet we decided to choose [API Blueprint](http://apiblueprint.org/) as it's more straight forward to work with, and has quite a large collection of tools such as [Aglio](https://github.com/danielgtaylor/aglio) for generating static HTML documentation files or [Dredd](https://github.com/apiaryio/dredd), which runs http client request using the example values on the definition files, and comparing with the server response. API Blueprint also has bindings for different languages such as [JavaScript/NodeJS](https://github.com/apiaryio/protagonist), [.NET](https://github.com/brutski/snowcrash-dot-net-wrapper) and most important, [Ruby](https://github.com/apiaryio/redsnow).
+At LonelyPlanet we decided to choose [API Blueprint](http://apiblueprint.org/) as it's more straight forward to work with, and has quite a large collection of tools such as [Aglio](https://github.com/danielgtaylor/aglio) for generating static HTML documentation files or [Dredd](https://github.com/apiaryio/dredd), which runs http client request using the example values on the definition files, and comparing with the server response. API Blueprint also has bindings for different languages such as [JavaScript/NodeJS](https://github.com/apiaryio/protagonist), [.NET](https://github.com/brutski/snowcrash-dot-net-wrapper) and most importantly, [Ruby](https://github.com/apiaryio/redsnow).
 
 We began driving our integration tests with Dredd. However, we soon realised that we needed extra features Dredd didn't have.
 
 ### Body comparisons.
 
-We need to compare attributes beyond the first level at the JSON response. Dredd wasn't detecting the difference between, for example, these two json blocks.
+We need to compare attributes beyond the first level of the JSON response. Dredd wasn't detecting the difference between, for example, these two json blocks.
 
 ```javascript
 // valid json
@@ -37,7 +37,7 @@ We need to compare attributes beyond the first level at the JSON response. Dredd
 
 ### Parameters per action
 
-Dredd wasn't taking account of the difference between Action parameters and Resource parameters. Then, a Resource that specifies resource specific parameters for the GET index action (like pagination params) will be used as well as part of the action POST on the resource url
+Dredd wasn't taking into account the difference between Action parameters and Resource parameters. Then, a Resource that specifies resource specific parameters for the GET index action (like pagination params) will be used as well as part of the action POST on the resource url.
 
 ```http
 
@@ -89,7 +89,7 @@ When getting this response from the server, we want to create a new context that
 
 During the last couple of months I have been working on a project that aims to solve the problems mentioned above. **[Vigía](http://github.com/nogates/vigia)**.
 
-Vigía is written in Ruby and uses RedSnow to parse the apib blueprint. Then, it automatically generates groups, contexts and examples using RSpec that describes the API according to the Blueprint file. Finally, it will execute a http request per context and run the generated examples to match the values of the result response with the expectations written in the definition file.
+Vigía is written in Ruby and uses RedSnow to parse the API Blueprint file. Then, it automatically generates groups, contexts and examples using RSpec that describes the API according to that Blueprint file. Finally, it executes an http request per context and runs the generated examples to match the values of the resulting response with the expectations written in the definition file.
 
 Main features:
 
@@ -113,7 +113,7 @@ Viga.run!
 
 ### Hooks
 
-Vigía has several hooks that can be used to control group/context/examples or other types of operations, such as setting the Database:
+Vigía uses hooks to control group/context/examples or other types of operations, such as setting the Database:
 
 ```ruby
 class DatabaseSet
@@ -164,6 +164,8 @@ Viga.run!
 ## To finish...
 
 Vigía is still under heavy development but is already being used on our API's projects. There are still some nice features that have to be implemented such as a better error formatting [[2](#note_2)], examples to measure the time a request has taken, and finally, adding support for other API definition providers.
+
+We'd love to hear about experiences using Vigía: tell us what you think!
 
 ----
 <a name="note_1"></a>
