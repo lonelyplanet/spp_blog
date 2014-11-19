@@ -62,7 +62,7 @@ farther down the road to grokville.  Meteor is a framework on the rise, having
 just reached 1.0. I plan to revisit it often to stay ahead of the curve as it
 gains a foothold in the very crowded JavaScript framework field.
 
-Jurnell Cochren
+Jurnell Cockhren
 ===============
 
 While at Hack Nashville, I decided it would be a great time to work with a few
