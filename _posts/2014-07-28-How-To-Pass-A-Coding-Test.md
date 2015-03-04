@@ -28,9 +28,9 @@ Write code that is as similar to production-level code as possible, given the co
 We like TDD, it is mentioned in our job advert, so of course one of the things we look for in a candidate is the ability to write good tests. What makes a good test?
 
 - Make sure your test makes it easy to identify where the problem in your code is. A simple way to do this is to make only one assertion per test block.
-- Unit test. Just to be sure you know what we mean by that: "a unit [is] the smallest testable part of an application["](http://en.wikipedia.org/wiki/Unit_testing).
-- Unit test everything. Or as much of everything as possible. 60% is not good enough 80% is lazy. 95%+ is getting there. 100% is great. The coding test probably won't have tricky edge cases that are untestable, so aim for 100%.
+- Unit test where necessary, e.g. complex methods, code we might find obscure or crucial functions. Just to be sure you know what we mean by unit testing: "a unit [is] the smallest testable part of an application["](http://en.wikipedia.org/wiki/Unit_testing).
 - Integration tests for our coding exercise are optional, but whether to include them or not will depend on the type of test you are doing. If you're not sure, put them in anyway. So far we haven't rejected anyone for putting in too many tests.
+- Test everything. TDD, BDD, unit, integration - there are different schools of thought on how to best approach testing and most of them have merit. At the end of the day the important thing is that any breaking changes to your code break your tests and clearly identify where the problem is.
 
 ### Design an App
 Even the simplest of applications can be split into a data model class, a display/runner class and some logic between the two. Design your solution to be robust, extensible and simple and then we'll know you can do the same thing for us. Yes, those principles involve trade-offs, and how you make those trade-offs will tell us a lot about what you think is important. Of course your audience will differ, but the best thing you can do is try to strike a balance between them. If you pick one and optimise for that at the expense of the others you're making assumptions about what we're looking for that may end up with your code in the reject pile.
@@ -46,7 +46,7 @@ A key quality of a good developer is attention to detail. Here's a list of detai
 - make sure the app runs before you send it in
 - tidy up your spelling everywhere - comments, project names, email, variable names, class names and all of the other places
 - use a recent version of your chosen language, not an old one
-- don't concatenate variable names. We have no idea what `c << a if g` means and neither will you in six months
+- don't abbreviate variable names. We have no idea what `c << a if g` means and neither will you in six months
 - finish the coding test before you submit it, a partial solution is not enough. If you feel it is taking too long, get in touch and we can negotiate a better submission date.
 
 Going for a job is a nerve-wracking process; no one likes to be judged. Writing code does have a strong creative element so what appeals to one person isn't necessarily going to appeal to another. However, it's our hope that by following these guidelines you can maximise your chances of getting through to the next stage in the hiring process. Have fun and good luck!
