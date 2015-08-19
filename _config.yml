@@ -6,6 +6,13 @@ lsi: false
 baseurl:
 url: engineering.lonelyplanet.com
 authors:
+  jcreamer: 
+    display_name: Jonathan Creamer
+    email: jonathan.creamer@lonelyplanet.com
+    web: http://www.jonathancreamer.com/
+    twitter: jcreamer898
+    github: jcreamer898
+    gravatar: a4d83e5a403a5d1d8ddc3a615591100d
   mriddle:
     display_name: Matt Riddle
     email: matthew.riddle@lonelyplanet.com.au
