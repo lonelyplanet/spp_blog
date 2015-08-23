@@ -1,43 +1,68 @@
 ---
 layout: default
 ---
+
 {% assign author = site.authors[page.author] %}
-<div class="post card card--page card--page--article">
+<article class="post card card--page card--page--article" itemscope itemtype="http://schema.org/BlogPosting">
+
   <div class="post_title">
-    <h1 class="copy--h1">{{ page.title }}</h1>
+    <h1 class="copy--h1" itemprop="headline">{{ page.title }}</h1>
   </div>
-  <div class="post_content">
+
+  <div class="post_content" itemprop="articleBody">
     {{ content }}
   </div>
-  <div class="published_date">
-    <div class="modified_on">{{ page.date | date_to_string }}</div>
-    <div class="modified_by">By {{ author.display_name }}</div>
-    <script>
-      if("{{ author.gravatar }}") {
-        document.write('<div class="gravatar"><img src="http://www.gravatar.com/avatar/{{ author.gravatar }}" /></div>');
-      }
-    </script>
-    <script>
-      if("{{ author.twitter }}") {
-        document.write('<div class="twitter"><a href="http://twitter.com/{{ author.twitter }}">@{{ author.twitter }}</a></div>');
-      }
-    </script>
+
+  <div class="post_footer">
+    <div class="post_footer_line1">
+      <time class="modified_on" itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
+      By {{ author.display_name }}
+    </div>
+
+    {% if author.gravatar or author.web or author.twitter or author.github %}
+    <div class="card--author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+
+      {% if author.gravatar %}
+        <span class="card--author__image">
+          <img src="//www.gravatar.com/avatar/{{ author.gravatar }}?s=64" itemprop="image" />
+        </span>
+      {% endif %}
+
+      {% if author.web %}<a href="{{ author.web }}" itemprop="url" target="_blank">{% endif %}
+      <span itemprop="name" class="card--author__name">{{ author.display_name }}</span>
+      {% if author.web %}</a>{% endif %}
+
+      <dl class="card--author__links">
+        {% if author.twitter %}
+          <dt>Twitter</dt>
+          <dd><span class="twitter"><a href="http://twitter.com/{{ author.twitter }}" itemprop="url" target="_blank">@{{ author.twitter }}</a></span></dd>
+        {% endif %}
+        {% if author.github %}
+          <dt>Github</dt>
+          <dd><span class="github"><a href="https://github.com/{{ author.github }}" itemprop="url" target="_blank">{{ author.github }}</a></span></dd>
+        {% endif %}
+      </dl>
+
+    </div>
+    {% endif %}
+
   </div>
+
   <div class="share">
-      <a href="https://twitter.com/share" class="twitter-share-button" data-via="lphackpackers">Tweet</a>
-      <script>
-        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-      </script>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="lphackpackers">Tweet</a>
+    <script>
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    </script>
   </div>
+
   <div id="disqus_thread"></div>
   <script type="text/javascript">
     var disqus_shortname = 'lptechblog';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
   </script>
-</div>
+
+</article>

@@ -3,10 +3,10 @@ layout: default
 title: LP Tech
 ---
 
-<div id="home">
-  <ul class="posts">
+<section id="home" itemscope itemtype="http://schema.org/Blog">
+  <div class="posts">
     {% for post in site.posts %}
       {% include post_summary.html %}
     {% endfor %}
-  </ul>
-</div>
+  </div>
+</section>
