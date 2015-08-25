@@ -103,3 +103,36 @@ table.data {
   font-weight: bold;
 }
 
+.card--author {
+  margin: 1em auto;
+  background: #DBE6EC;
+  padding: 10px;
+  clear: both;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.card--author__image {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.card--author__image img {
+  display: block;
+}
+
+.card--author__name {
+  font-weight: bold;
+  line-height: 1;
+}
+
+.card--author__links {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.card--author__links dt {
+  float: left;
+  width: 60px;
+}
