@@ -81,6 +81,47 @@ table.data {
   height: 100%;
 }
 
+.post + .post {
+  margin-top: 2.5em;
+}
+
+.post + .post--comments {
+  margin-top: 1em;
+}
+
+.post__title {
+  font-weight: bold;
+}
+
+.post .card__content{
+  border-color: #508DBB;
+}
+
+.post .card__content,
+.post .card__footer {
+  position: relative;
+  height: auto;
+}
+
+.post .card__footer{
+  padding: 0;
+  margin: 10px auto 0 auto;
+}
+
+.card__content__subtitle {
+  margin: 10px auto;
+  clear: both;
+  overflow: hidden;
+}
+
+.card__content__body {
+  font-size: 1.15em;
+  line-height: 1.33;
+}
+
+.card__content__excerpt {
+}
+
 .post_content img, .post_content figure, .post_content video {
   max-width: 100%;
   margin: 1em 0;
@@ -110,11 +151,14 @@ table.data {
   clear: both;
   overflow: hidden;
   border-radius: 3px;
+  line-height: 1.333;
 }
 
 .card--author__image {
   float: left;
   margin: 0 10px 0 0;
+  border-radius: 3px;
+  overflow: hidden;
 }
 
 .card--author__image img {
@@ -135,4 +179,16 @@ table.data {
 .card--author__links dt {
   float: left;
   width: 60px;
+}
+
+.lp-blog{
+}
+
+.lp-blog__header{
+  margin: 1.5em 0;
+}
+
+.lp-blog__header .place-title-heading{
+  font-weight: bold;
+  color: inherit;
 }
