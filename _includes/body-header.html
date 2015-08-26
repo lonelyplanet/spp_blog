@@ -1,4 +1,27 @@
-<div class='accessibility'>
+<div class='row row--fluid row--cookie-compliance js-cookie-compliance is-closed'>
+<div class='wv--split--left cookie-msg'>
+<p class='cookie-text'>
+<strong>
+Hi there,
+</strong>
+we use cookies to improve your experience on our website. You can
+<a class='cookie-link' href='http://www.lonelyplanet.com/legal/cookies'>
+update your settings
+</a>
+by clicking the Cookie Policy link at the bottom of the page.
+</p>
+</div>
+<div class='wv--split--right cookie-buttons'>
+<div class='btn btn--small btn--green js-close'>
+No worries
+</div>
+<a class='btn btn--small btn--grey' href='http://www.lonelyplanet.com/legal/cookies/'>
+Learn more
+</a>
+</div>
+</div>
+
+<div aria-label='Page quick links' class='accessibility'>
 <a class='go' href='#container'>
 go to content
 </a>
@@ -10,170 +33,294 @@ go to global site navigation
 </a>
 </div>
 
-<div class='is-closed row row--leaderboard'>
-<div class='row__inner'>
-<div class='ad-leaderboard'>
-<div class='ad-leaderboard__inner'>
-<div class='adunit adunit--leaderboard' data-dimensions='728x90,970x66,320x50' id='js-ad-leaderboard'></div>
-
-</div>
-</div>
-</div>
-</div>
 
 <div class='row--primary' id='js-primary-nav'>
 <div class='row--faux-banner'></div>
 <input class='is-hidden' id='nav--primary__trigger' type='checkbox'>
-<label class='nav--primary__trigger icon--hamburger icon--white' for='nav--primary__trigger'></label>
-<a class='media--lp-logo logo--header icon--lp-logo icon--white' href='http://www.lonelyplanet.com'></a>
+<label class='copy--h2 wv--hidden nav--primary__trigger icon--hamburger--before icon--white--before js-toggle-active' data-toggle-class='show-nav' data-toggle-target='body' for='nav--primary__trigger'>Menu</label>
+<a class='media--lp-logo logo--header icon--lp-logo icon--white' href='http://www.lonelyplanet.com' title='Return to homepage'></a>
 <div class='nav-container m-hidden-menu'>
 <div class='wv--split--right'>
 <div class='wv--nav--inline split--right__inner nav--user'>
-<form action='//www.lonelyplanet.com/searchResult' class='search--primary search--primary-wv js-nav-search wv--inline-block' method='get'>
-<label class='accessibility' for='search-q'>Search</label><input autocomplete='off' class='search__input search__input--primary js-primary-search' id='search' maxlength='2048' name='q' tabindex='1' type='search' value=''><button class='search__button' id='search-q-submit' name='search-q-submit' type='submit'>
-<span class='search__button--icon icon--search icon--white'>
+<form action='//www.lonelyplanet.com/search' class='search--primary search--primary-wv js-nav-search wv--inline-block' method='get' role='search'>
+<label class='accessibility' for='search-q'>Search</label>
+<input autocomplete='off' class='search__input search__input--primary js-primary-search' id='search-q' maxlength='2048' name='q' placeholder='Enter your search term' tabindex='1' type='search' value=''>
+<button class='icon--search icon--white js-search-icon search__button search__input__icon' id='search-q-submit' type='submit'>
 Search
-</span>
 </button>
 </form>
-<div class='nav__item wv--nav--inline nav--primary--user js-user-nav split--right__inner'>
-<a class='nav__item nav__item--primary nav__item--user user-basket js-user-basket js-nav-cart' href='http://shop.lonelyplanet.com/cart/view'>
-<span class='user-basket__icon icon--shop-basket icon--custom'>
+<nav aria-label='User navigation' class='nav__item wv--nav--inline nav--primary--user js-user-nav split--right__inner' itemscope='itemscope' itemtype='http://schema.org/SiteNavigationElement' role='navigation' title='User navigation'>
+<h6 class='accessibility'>User navigation</h6>
+<a class='nav__item nav__item--primary nav__item--user user-basket wv--inline-block js-user-basket js-nav-cart' href='http://shop.lonelyplanet.com/cart/view'>
+<span class='user-basket__icon icon--shop-basket icon--white' itemprop='name'>
 View Basket
 </span>
 </a>
-<script id='js-user-nav-template' type='text/mustache'>
-<div class="js-user-signed-out-template">
-  <div class="wv--nav--inline nav__item--user-menu js-user-signed-out">
-    <a class="nav__item nav__item--primary js-user-sign_in js-nav-item" href="/thorntree/users/sign_in">
-      <i class="nav__icon icon--user--before icon--white--before"></i>
-      Sign in
-    </a>
-    <a class="nav__item nav__item--primary js-user-sign_up js-nav-item" href="/thorntree/users/sign_up">
-      <i class="nav__icon icon--sign-in--before icon--white--before"></i>
-      Join
-    </a>
-  </div>
+<script id='js-user-nav-template' type='text/html'>
+<div class='js-user-signed-out-template'>
+<div class='wv--nav--inline nav__item--user-menu js-user-signed-out'>
+<a class='js-nav-item js-user-sign_in nav__item nav__item--primary sign-in' data-lpa-action='sign-in' data-lpa-category='account' href='https://auth.lonelyplanet.com/users/sign_in' itemprop='url'><div class='nav__icon icon--user--before icon--white--before wv--hidden--before nav__submenu__item__text' itemprop='name'>
+Sign in</div></a>
 
-  <div class="wv--nav--inline nav__item--user-menu--wv js-user-signed-out">
-    <a class="nav__item nav__item--primary js-user-sign_in js-nav-item" href="/thorntree/users/sign_in">
-      <i class="nav__icon icon--user--before icon--white--before"></i>
-      Sign in
-    </a>
-    <a class="nav__item nav__item--primary js-user-sign_up js-nav-item" href="/thorntree/users/sign_up">
-      <i class="nav__icon icon--sign-in--before icon--white--before"></i>
-      Join
-    </a>
-  </div>
+<a class='btn--linkblue js-nav-item js-user-sign_up nav__item nav__item--primary' data-lpa-action='join' data-lpa-category='account' href='https://auth.lonelyplanet.com/users/sign_up' itemprop='url'><div class='nav__icon icon--sign-in--before icon--white--before wv--hidden--before nav__submenu__item__text' itemprop='name'>
+Join</div></a>
+
+</div>
+<div class='wv--nav--inline nav__item--user-menu--wv js-user-signed-out'>
+<a class='btn btn--linkblue btn--small js-nav-item js-user-sign_up nav__item nav__item--primary' data-lpa-action='join' data-lpa-category='account' href='https://auth.lonelyplanet.com/users/sign_up' itemprop='url'><div class='nav__icon icon--sign-in--before icon--white--before wv--hidden--before nav__submenu__item__text' itemprop='name'>
+Join</div></a>
+
+<span class='nav__item nav__item--primary or'>
+or
+</span>
+
+<a class='js-nav-item js-user-sign_in nav__item nav__item--primary sign-in' data-lpa-action='sign-in' data-lpa-category='account' href='https://auth.lonelyplanet.com/users/sign_in' itemprop='url'><div class='nav__icon icon--user--before icon--white--before wv--hidden--before nav__submenu__item__text' itemprop='name'>
+Sign in</div></a>
+
 </div>
 
-<div class="js-user-signed-in-template">
-  <div class="nav__item nav__item--user nav__submenu__trigger js-user-signed-in">
-    <img class="nav__item--user-avatar js-user-avatar" data-src="{{avatar}}">
-    <span class="notification-badge notification-badge--unread-messages wv--inline-block is-hidden js-unread-messages">{{unreadMessageCount}}</span>
-    <span class="wv--hidden nav--offscreen__title">{{username}}</span>
+</div>
+<div class='js-user-signed-in-template'>
+<div class='nav__item nav__item--user nav__submenu__trigger js-user-signed-in'>
+<img class='nav__item--user-avatar js-user-avatar' data-src='{{avatar}}'>
+<span class='notification-badge notification-badge--unread-messages wv--inline-block is-hidden js-unread-feed-count'>0</span>
+<span class='wv--hidden nav--offscreen__title'>{{username}}</span>
+<div class='user-feed nav__submenu js-user-feed'>
+<div class='user-feed__container nav--stacked nav__submenu__content icon--tapered-arrow-up--after icon--white--after icon--white--bordered'>
+<div class='user-feed__header js-user-feed-header'>
+<div class='user-feed__username'>{{username}}</div>
+<div class='user-feed__email'>{{email}}</div>
+<div class='user-feed__buttons'>
+<a class='split--right icon--settings icon--body-grey js-user-settings' href='https://www.lonelyplanet.com/thorntree/forums/settings'></a>
+<div class='grid-wrapper--10'>
+<div class='col--one-half'>
+<a class='btn btn--linkblue btn--small btn--full-width js-user-profile' href='https://www.lonelyplanet.com/thorntree/profiles/{{profileSlug}}'>View Profile</a>
+</div>
+<div class='col--one-half'>
+<a class='btn btn--linkblue btn--small btn--outline btn--full-width js-user-sign_out' href='https://auth.lonelyplanet.com/users/sign_out'>Sign Out</a>
+</div>
+</div>
+</div>
+</div>
+<div class='user-feed__content js-user-feed-content'>
+<div class='nav__tabs'>
+<div class='grid-wrapper--0'>
+<div class='col--one-half'>
+<a class='btn btn--large btn--white nav__tabs__btn js-tab-trigger is-active' href='#js-user-feed-activities-list'>
+Recent activity
+<span class='user-feed__content__unread-count js-unread-activities-count'></span>
+</a>
+</div>
+<div class='col--one-half'>
+<a class='btn btn--large btn--white nav__tabs__btn js-tab-trigger' href='#js-user-feed-messages-list'>
+Messages
+<span class='user-feed__content__unread-count js-unread-messages-count'></span>
+</a>
+</div>
+</div>
+</div>
+<div class='nav__tabs__content js-tabs-content'>
+<ul class='user-feed__list is-active' id='js-user-feed-activities-list'>
+<li class='activity-list__item--empty'>You have no recent activity.</li>
+</ul>
+<ul class='user-feed__list' id='js-user-feed-messages-list'>
+<li class='activity-list__item--empty'>You have no private messages.</li>
+<li class='user-feed__footer user-feed__buttons js-user-feed-footer is-hidden'>
+<a class='btn btn--linkblue btn--full-width' href='https://www.lonelyplanet.com/thorntree/profiles/{{profileSlug}}/messages'>See all messages</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='wv--nav--inline nav__item--user-menu js-user-signed-in'>
+<a class='js-nav-item nav__item nav__item--primary' href='https://www.lonelyplanet.com/thorntree/profiles/{{profileSlug}}' itemprop='url'><div class='nav__icon icon--user--before icon--white--before wv--hidden--before nav__submenu__item__text' itemprop='name'>
+My profile</div></a>
 
-    <div class="nav__submenu nav__submenu--user">
-      <div class="nav--stacked nav__submenu__content icon--tapered-arrow-up--after icon--custom--after nav__submenu__content--user nav-user-options js-user-options">
-        <div class="nav__submenu__item nav__submenu__title">{{username}}</div>
-        <a class="nav__item nav__submenu__item nav__submenu__link nav-user-options__item js-nav-item js-user-profile" href="/thorntree/profiles/{{username}}">
-          My profile
-        </a>
-        <a class="nav__item nav__submenu__item nav__submenu__link nav-user-options__item js-nav-item js-user-settings" href="/thorntree/forums/settings">
-          Settings
-        </a>
-        <a class="nav__item nav__submenu__item nav__submenu__link nav-user-options__item js-nav-item js-user-messages" href="/thorntree/profiles/{{username}}/messages">
-          Messages
-          <span class="nav__submenu__notification is-hidden js-unread-messages">{{unreadMessageCount}}</span>
-        </a>
-        <a class="nav__item nav__submenu__item nav__submenu__link nav-user-options__item js-nav-item nav-user-options__item--forum js-user-activities" href="/thorntree/profiles/{{username}}/activities">
-          Forum activity
-        </a>
-        <a class="nav__item nav__submenu__item nav__submenu__link nav-user-options__item js-nav-item nav-user-options__item--sign_out js-user-sign_out" href="/thorntree/users/sign_out">
-          Sign out
-        </a>
-      </div>
-    </div>
-  </div>
+<a class='js-nav-item nav__item nav__item--primary' href='https://www.lonelyplanet.com/thorntree/forums/settings' itemprop='url'><div class='nav__icon icon--settings--before icon--white--before wv--hidden--before nav__submenu__item__text' itemprop='name'>
+Settings</div></a>
 
-  <div class="wv--nav--inline nav__item--user-menu js-user-signed-in">
-    <a class="nav__item nav__item--primary" href="/thorntree/profiles/{{username}}">
-      <i class="nav__icon copy--icon--before icon--user--before icon--white--before"></i>
-      My profile
-    </a>
-    <a class="nav__item nav__item--primary" href="/thorntree/forums/settings">
-      <i class="nav__icon copy--icon--before icon--settings--before icon--white--before"></i>
-      Settings
-    </a>
-    <a class="nav__item nav__item--primary" href="/thorntree/profiles/{{username}}/messages">
-      <i class="nav__icon copy--icon--before icon--envelope--before icon--white--before"></i>
-      Messages
-      <span class="is-hidden js-unread-messages"> ({{unreadMessageCount}})</span>
-    </a>
-    <a class="nav__item nav__item--primary" href="/thorntree/profiles/{{username}}/activities">
-      <i class="nav__icon copy--icon--before icon--comment--before icon--white--before"></i>
-      Forum activity
-    </a>
-    <a class="nav__item nav__item--primary" href="/thorntree/users/sign_out">
-      <i class="nav__icon copy--icon--before icon--sign-out--before icon--white--before"></i>
-      Sign out
-    </a>
-  </div>
+<a class='js-nav-item js-responsive-messages nav__item nav__item--primary' href='https://www.lonelyplanet.com/thorntree/profiles/{{profileSlug}}/messages' itemprop='url'><div class='nav__icon icon--envelope--before icon--white--before wv--hidden--before nav__submenu__item__text' itemprop='name'>
+Messages</div></a>
+
+<a class='js-nav-item nav__item nav__item--primary' href='https://www.lonelyplanet.com/thorntree/profiles/{{profileSlug}}/activities' itemprop='url'><div class='nav__icon icon--comment--before icon--white--before wv--hidden--before nav__submenu__item__text' itemprop='name'>
+Forum Activity</div></a>
+
+<a class='js-nav-item nav__item nav__item--primary' href='https://auth.lonelyplanet.com/users/sign_out' itemprop='url'><div class='nav__icon icon--sign-out--before icon--white--before wv--hidden--before nav__submenu__item__text' itemprop='name'>
+Sign out</div></a>
+
+</div>
+
 </div>
 
 </script>
 <noscript>
 <div class='nav__item nav__item--user'>
-<a class='nav__item nav__item--primary js-nav-item' href='https://www.lonelyplanet.com/thorntree/my_account'>
-<i class='nav__icon icon--user--before icon--white--before'></i>
-My account
-</a>
+<a class='js-nav-item nav__item nav__item--primary' href='https://www.lonelyplanet.com/thorntree/my_account' itemprop='url'><div class='nav__icon icon--user--line--before icon--white--before wv--hidden--before nav__submenu__item__text' itemprop='name'>
+My account</div></a>
+
 </div>
 </noscript>
-</div>
+</nav>
 </div>
 </div>
 <div class='wv--split--left'>
-<div class='wv--nav--inline nav--primary' id='js-nav--primary'>
-<div class='nav__item nav__item--primary nav__submenu__trigger'>
-<a class='nav__item nav__item--submenu js-nav-item' href='http://www.lonelyplanet.com/destinations'>
-Destinations
+<nav aria-label='Global navigation' class='wv--nav--inline nav--primary' id='js-nav--primary' itemscope='itemscope' itemtype='http://schema.org/SiteNavigationElement' role='navigation'>
+<h6 class='accessibility'>Global navigation</h6>
+<a class='js-nav-item nav__item nav__item--primary wv--hidden' href='http://www.lonelyplanet.com/search' itemprop='url'><div class='nav__icon icon--search--before icon--white--before wv--hidden--before nav__submenu__item__text' itemprop='name'>
+Search</div></a>
+
+<div class='nav__submenu__trigger nav__item nav__item--primary'>
+<a class='js-nav-item nav__item' href='http://www.lonelyplanet.com/places' itemprop='url'><div class='nav__icon icon--place--pin--line--before icon--white--before wv--hidden--before nav__submenu__item__text' itemprop='name'>
+Destinations</div></a>
+<div class='nav__submenu'>
+<div class='nav--stacked nav__submenu__content js-submenu icon--tapered-arrow-up--after icon--white--after'>
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/best-in-travel' itemprop='url'><div class=' nav__submenu__item__text' itemprop='name'>
+Best in travel<span class='badge--pink nav__item__badge'>
+Featured</span>
+</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/africa' itemprop='url'><div class=' nav__submenu__item__text' itemprop='name'>
+Africa</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/antarctica' itemprop='url'><div class=' nav__submenu__item__text' itemprop='name'>
+Antarctica</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/asia' itemprop='url'><div class=' nav__submenu__item__text' itemprop='name'>
+Asia</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/caribbean' itemprop='url'><div class=' nav__submenu__item__text' itemprop='name'>
+Caribbean</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/central-america' itemprop='url'><div class=' nav__submenu__item__text' itemprop='name'>
+Central America</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/europe' itemprop='url'><div class=' nav__submenu__item__text' itemprop='name'>
+Europe</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/middle-east' itemprop='url'><div class=' nav__submenu__item__text' itemprop='name'>
+Middle East</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/north-america' itemprop='url'><div class=' nav__submenu__item__text' itemprop='name'>
+North America</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/pacific' itemprop='url'><div class=' nav__submenu__item__text' itemprop='name'>
+Pacific</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/south-america' itemprop='url'><div class=' nav__submenu__item__text' itemprop='name'>
+South America</div></a>
+
+<div class='nav__submenu__button'>
+<a class='btn btn--linkblue btn--medium btn--full-width' href='/places'>
+View countries
 </a>
-<div class='nav__submenu nav__submenu--destinations'>
-<div class='nav--stacked nav__submenu__content js-submenu icon--tapered-arrow-up--after icon--custom--after'>
-<a class='icon--white--before js-nav-item nav__item nav__submenu__item nav__submenu__item-- nav__submenu__link' href='http://www.lonelyplanet.com/africa'>Africa</a>
-<a class='icon--white--before js-nav-item nav__item nav__submenu__item nav__submenu__item-- nav__submenu__link' href='http://www.lonelyplanet.com/antarctica'>Antarctica</a>
-<a class='icon--white--before js-nav-item nav__item nav__submenu__item nav__submenu__item-- nav__submenu__link' href='http://www.lonelyplanet.com/asia'>Asia</a>
-<a class='icon--white--before js-nav-item nav__item nav__submenu__item nav__submenu__item-- nav__submenu__link' href='http://www.lonelyplanet.com/caribbean'>Caribbean</a>
-<a class='icon--white--before js-nav-item nav__item nav__submenu__item nav__submenu__item-- nav__submenu__link' href='http://www.lonelyplanet.com/central-america'>Central America</a>
-<a class='icon--white--before js-nav-item nav__item nav__submenu__item nav__submenu__item-- nav__submenu__link' href='http://www.lonelyplanet.com/europe'>Europe</a>
-<a class='icon--white--before js-nav-item nav__item nav__submenu__item nav__submenu__item-- nav__submenu__link' href='http://www.lonelyplanet.com/middle-east'>Middle East</a>
-<a class='icon--white--before js-nav-item nav__item nav__submenu__item nav__submenu__item-- nav__submenu__link' href='http://www.lonelyplanet.com/north-america'>North America</a>
-<a class='icon--white--before js-nav-item nav__item nav__submenu__item nav__submenu__item-- nav__submenu__link' href='http://www.lonelyplanet.com/pacific'>Pacific</a>
-<a class='icon--white--before js-nav-item nav__item nav__submenu__item nav__submenu__item-- nav__submenu__link' href='http://www.lonelyplanet.com/south-america'>South America</a>
-</div>
-</div>
-</div>
-<a class='nav__item nav__item--primary' href='http://www.lonelyplanet.com/themes'>Themes</a>
-<a class='nav__item nav__item--primary' href='http://shop.lonelyplanet.com'>Shop</a>
-<a class='nav__item nav__item--primary' href='http://www.lonelyplanet.com/thorntree'>Thorn Tree Forum</a>
-<div class='nav__item nav__item--primary nav__submenu__trigger'>
-<a class='nav__item nav__item--submenu js-nav-item' href='http://www.lonelyplanet.com/hotels/'>
-Bookings
-</a>
-<div class='nav__submenu nav__submenu--bookings'>
-<div class='nav--stacked nav__submenu__content js-submenu icon--tapered-arrow-up--after icon--custom--after'>
-<a class='icon--hotel--before icon--white--before js-nav-item nav__item nav__submenu__item nav__submenu__item--hotels nav__submenu__link' href='http://www.lonelyplanet.com/hotels'>Hotels</a>
-<a class='icon--flights--before icon--white--before js-nav-item nav__item nav__submenu__item nav__submenu__item--flights nav__submenu__link' href='http://www.lonelyplanet.com/flights/'>Flights</a>
-<a class='icon--car--before icon--white--before js-nav-item nav__item nav__submenu__item nav__submenu__item--car-rental nav__submenu__link' href='http://www.lonelyplanet.com/car-rental/'>Car Rental</a>
-<a class='icon--tour--before icon--white--before js-nav-item nav__item nav__submenu__item nav__submenu__item--adventure-tours nav__submenu__link' href='http://www.lonelyplanet.com/adventure-tours/'>Adventure tours</a>
-<a class='icon--activity--before icon--white--before js-nav-item nav__item nav__submenu__item nav__submenu__item--sightseeing-tours nav__submenu__link' href='http://www.lonelyplanet.com/sightseeing-tours/'>Sightseeing tours</a>
-</div>
-</div>
-</div>
-<a class='nav__item nav__item--primary' href='http://www.lonelyplanet.com/travel-insurance'>Insurance</a>
 </div>
 </div>
 </div>
 
+
 </div>
+<div class='nav__submenu__trigger nav__item nav__item--primary'>
+<a class='js-nav-item nav__item' href='http://www.lonelyplanet.com/inspiration' itemprop='url'><div class='nav__icon icon--adventure-travel--before icon--white--before wv--hidden--before nav__submenu__item__text' itemprop='name'>
+Inspiration</div></a>
+<div class='nav__submenu'>
+<div class='nav--stacked nav__submenu__content js-submenu icon--tapered-arrow-up--after icon--white--after'>
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/adventure-travel' itemprop='url'><div class='nav__icon icon--adventure-travel--before  nav__submenu__item__text' itemprop='name'>
+Adventure travel</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/beaches' itemprop='url'><div class='nav__icon icon--beaches--before  nav__submenu__item__text' itemprop='name'>
+Beaches</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/budget-travel' itemprop='url'><div class='nav__icon icon--budget-travel--before  nav__submenu__item__text' itemprop='name'>
+Budget travel</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/coasts-and-islands' itemprop='url'><div class='nav__icon icon--coasts-and-islands--before  nav__submenu__item__text' itemprop='name'>
+Coasts and islands</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/family-travel' itemprop='url'><div class='nav__icon icon--family-travel--before  nav__submenu__item__text' itemprop='name'>
+Family travel</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/festivals-and-events' itemprop='url'><div class='nav__icon icon--festivals-and-events--before  nav__submenu__item__text' itemprop='name'>
+Festivals and events</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/food-and-drink' itemprop='url'><div class='nav__icon icon--food-and-drink--before  nav__submenu__item__text' itemprop='name'>
+Food and drink</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/honeymoons-and-romance' itemprop='url'><div class='nav__icon icon--honeymoons-and-romance--before  nav__submenu__item__text' itemprop='name'>
+Honeymoons and romance</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/luxury-travel' itemprop='url'><div class='nav__icon icon--luxury-travel--before  nav__submenu__item__text' itemprop='name'>
+Luxury travel</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/round-the-world-travel' itemprop='url'><div class='nav__icon icon--round-the-world-travel--before  nav__submenu__item__text' itemprop='name'>
+Round the world travel</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/wildlife-and-nature' itemprop='url'><div class='nav__icon icon--wildlife-and-nature--before  nav__submenu__item__text' itemprop='name'>
+Wildlife and nature</div></a>
+
+</div>
+</div>
+
+
+</div>
+<a class='js-nav-item nav__item nav__item--primary' href='http://shop.lonelyplanet.com' itemprop='url'><div class='nav__icon icon--shop-basket--line--before icon--white--before wv--hidden--before nav__submenu__item__text' itemprop='name'>
+Shop</div></a>
+
+<a class='js-nav-item nav__item nav__item--primary' href='http://www.lonelyplanet.com/thorntree' itemprop='url'><div class='nav__icon icon--comment--line--before icon--white--before wv--hidden--before nav__submenu__item__text' itemprop='name'>
+Thorn Tree Forum</div></a>
+
+<div class='nav__submenu__trigger nav__item nav__item--primary'>
+<a class='js-nav-item nav__item' href='http://www.lonelyplanet.com/bookings/' itemprop='url'><div class='nav__icon icon--flights--line--before icon--white--before wv--hidden--before nav__submenu__item__text' itemprop='name'>
+Bookings</div></a>
+<div class='nav__submenu'>
+<div class='nav--stacked nav__submenu__content js-submenu icon--tapered-arrow-up--after icon--white--after'>
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/hotels' itemprop='url'><div class='nav__icon icon--hotel--before  nav__submenu__item__text' itemprop='name'>
+Hotels</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/flights/' itemprop='url'><div class='nav__icon icon--flights--before  nav__submenu__item__text' itemprop='name'>
+Flights</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/car-rental/' itemprop='url'><div class='nav__icon icon--car--before  nav__submenu__item__text' itemprop='name'>
+Car rental</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/adventure-tours/' itemprop='url'><div class='nav__icon icon--tour--before  nav__submenu__item__text' itemprop='name'>
+Adventure tours</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/sightseeing-tours/' itemprop='url'><div class='nav__icon icon--activity--before  nav__submenu__item__text' itemprop='name'>
+Sightseeing tours</div></a>
+
+<a class='js-nav-item nav__item nav__submenu__item' href='http://www.lonelyplanet.com/airport-transfers/' itemprop='url'><div class='nav__icon icon--transfers--before  nav__submenu__item__text' itemprop='name'>
+Airport transfers</div></a>
+
+</div>
+</div>
+
+
+</div>
+<a class='js-nav-item nav__item nav__item--primary' href='http://www.lonelyplanet.com/travel-insurance' itemprop='url'><div class='nav__icon icon--insurance--line--before icon--white--before wv--hidden--before nav__submenu__item__text' itemprop='name'>
+Insurance</div></a>
+
+</nav>
+</div>
+</div>
+
+</div>
+<div class='row row--sponsored row--leaderboard row--leaderboard--header'>
+<div class='ad-leaderboard'>
+<div class='ad-leaderboard__inner'>
+<div class='adunit adunit--leaderboard' data-size-mapping='leaderboard' data-targeting='{"position":"header"}'></div>
+
+<div class='ad-leaderboard__sponsor'>
+<div id='js-sponsor-logo-html'>
+<div style='display: none'>
+<div class='adunit' data-size-mapping='sponsor-logo-html' data-targeting='{"position":"header"}'></div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+
