@@ -3,20 +3,33 @@ layout: default
 ---
 
 {% assign author = site.authors[page.author] %}
-<article class="post card card--page card--page--article" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="card js-card card--article card--has-footer post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <div class="post_title">
-    <h1 class="copy--h1" itemprop="headline">{{ page.title }}</h1>
-  </div>
+  <div class="card__content">
 
-  <div class="post_content" itemprop="articleBody">
-    {{ content }}
-  </div>
+    <header>
 
-  <div class="post_footer">
-    <div class="post_footer_line1">
-      <time class="modified_on" itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
-      By {{ author.display_name }}
+      <h1 class="card__content__title js-prerender-title post__title" itemprop="headline">
+        {{ page.title }}
+      </h1>
+
+      <div class="card__content__subtitle">
+
+        <span class="user-attribution user-attribution--nano" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          {% if author.gravatar %}
+            <span class="card--author__image">
+              <img alt="{{ author.display_name }}" class="user-attribution__avatar" src="//www.gravatar.com/avatar/{{ author.gravatar }}?s=20" srcset="//www.gravatar.com/avatar/{{ author.gravatar }}?s=40 2x" itemprop="image" />
+            </span>
+          {% endif %}
+          <span class="user-attribution__source">by</span>
+          <span class="user-attribution__username" itemprop="name">{{ author.display_name }}</span>
+        </span>
+      </div>
+
+    </header>
+
+    <div class="card__content__body" itemprop="articleBody">
+      {{ content }}
     </div>
 
     {% if author.gravatar or author.web or author.twitter or author.github %}
@@ -46,23 +59,34 @@ layout: default
     </div>
     {% endif %}
 
-  </div>
+    <footer class="card__footer">
+      <div class="share split--left">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="lphackpackers">Tweet</a>
+        <script>
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+        </script>
+      </div>
 
-  <div class="share">
-    <a href="https://twitter.com/share" class="twitter-share-button" data-via="lphackpackers">Tweet</a>
-    <script>
-      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-    </script>
-  </div>
+      <span class="split--right">
+        Published <time class="post__meta--date" itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
+      </span>
+    </footer>
 
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    var disqus_shortname = 'lptechblog';
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
+  </div>
 
 </article>
+<aside class="card js-card post post--comments">
+  <div class="card__content">
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'lptechblog';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+
+  </div>
+</aside>

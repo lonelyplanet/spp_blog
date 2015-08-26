@@ -1,26 +1,42 @@
 {% assign author = site.authors[post.author] %}
-<article class="post card card--page card--page--article" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="card js-card card--article card--has-footer post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <div class="post_title">
-    <h3 class="copy--h3">
-      <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">
-        <span itemprop="headline">{{ post.title }}</span>
-      </a>
-    </h3>
-  </div>
+  <div class="card__content">
 
-  <div class="post_content">
-    <p itemprop="articleBody">{{ post.excerpt }}</p>
-  </div>
+    <header>
 
-  <a href="{{ site.baseurl }}{{ post.url }}">Read more&hellip;</a>
-      
-  <div class="published_date">
-    <time class="modified_on" itemprop="datePublished" content="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
-    by
-    <span class="modified_by" itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <span itemprop="name">{{ author.display_name }}</span>
-    </span>
+      <h2 class="card__content__title js-prerender-title post__title">
+        <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">
+          <span itemprop="headline">{{ post.title }}</span>
+        </a>
+      </h2>
+
+      <div class="card__content__subtitle">
+
+        <span class="user-attribution user-attribution--nano" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          {% if author.gravatar %}
+            <span class="card--author__image">
+              <img alt="{{ author.display_name }}" class="user-attribution__avatar" src="//www.gravatar.com/avatar/{{ author.gravatar }}?s=20" srcset="//www.gravatar.com/avatar/{{ author.gravatar }}?s=40 2x" itemprop="image" />
+            </span>
+          {% endif %}
+          <span class="user-attribution__source">by</span>
+          <span class="user-attribution__username" itemprop="name">{{ author.display_name }}</span>
+        </span>
+      </div>
+
+    </header>
+
+    <div class="card__content__body card__content__excerpt" itemprop="articleBody">
+      {{ post.excerpt }}
+    </div>
+
+    <footer class="card__footer">
+      <span class="split--right">
+        Published <time class="post__meta--date" itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+      </span>
+      <a href="{{ site.baseurl }}{{ post.url }}">Read more&hellip;</a>
+    </footer>
+
   </div>
 
 </article>
